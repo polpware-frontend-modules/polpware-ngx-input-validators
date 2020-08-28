@@ -102,5 +102,5 @@ NgxInputValidatorsModule.ɵinj = ɵɵdefineInjector({ factory: function NgxInput
  * Generated bundle index. Do not edit.
  */
 
-export { NgxInputValidatorsModule, buildUrlValidator, normalizeHost, normalizeUrl, validateUrl };
+export { NgxInputValidatorsModule, buildUrlValidator, isInvalidSpec, normalizeHost, normalizeUrl, validateUrl };
 //# sourceMappingURL=polpware-ngx-input-validators.js.map
