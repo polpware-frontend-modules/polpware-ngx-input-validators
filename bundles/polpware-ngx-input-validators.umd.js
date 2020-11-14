@@ -104,6 +104,7 @@
 
     exports.NgxInputValidatorsModule = NgxInputValidatorsModule;
     exports.buildUrlValidator = buildUrlValidator;
+    exports.isInvalidSpec = isInvalidSpec;
     exports.normalizeHost = normalizeHost;
     exports.normalizeUrl = normalizeUrl;
     exports.validateUrl = validateUrl;
