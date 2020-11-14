@@ -65,6 +65,10 @@ function buildUrlValidator(options) {
     const inputs = Object.assign({}, options);
     return function (control) {
         const value = control.value;
+        // Virtually true if there is no any value. 
+        if (!value) {
+            return null;
+        }
         const results = validateUrl(value, !!inputs.parseQuery);
         if (isInvalidSpec(results)) {
             return results;

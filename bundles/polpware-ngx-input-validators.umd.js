@@ -70,6 +70,10 @@
         var inputs = Object.assign({}, options);
         return function (control) {
             var value = control.value;
+            // Virtually true if there is no any value. 
+            if (!value) {
+                return null;
+            }
             var results = validateUrl(value, !!inputs.parseQuery);
             if (isInvalidSpec(results)) {
                 return results;
