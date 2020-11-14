@@ -17,7 +17,7 @@ export interface IUrlParseResult {
     toString(): string;
 }
 export interface IInvalidSpec {
-    invalid: boolean;
+    url: string;
 }
 export declare function validateUrl(value: string, parseQuery: boolean): IInvalidSpec | IUrlParseResult;
 /**
@@ -28,7 +28,6 @@ export declare function validateUrl(value: string, parseQuery: boolean): IInvali
 */
 export declare function normalizeHost(s: string, rm3w?: boolean): string;
 export declare function normalizeUrl(s: string, keepQuery?: boolean, endWithSlash?: boolean): string;
-export declare function isInvalidSpec(v: IUrlParseResult | IInvalidSpec): v is IInvalidSpec;
 export declare function buildUrlValidator(options?: {
     https?: boolean;
     parseQuery?: boolean;

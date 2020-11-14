@@ -6,11 +6,11 @@ function validateUrl(value, parseQuery) {
     var pattern = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
     var expr = new RegExp(pattern);
     if (!expr.test(value)) {
-        return { invalid: true };
+        return { url: 'Invalid URL' };
     }
     var results = new Url(value, parseQuery);
     if (!results.protocol || !results.host) {
-        return { invalid: true };
+        return { url: 'Invalid URL' };
     }
     return results;
 }
@@ -62,7 +62,7 @@ function normalizeUrl(s, keepQuery, endWithSlash) {
 }
 // Type predicate 
 function isInvalidSpec(v) {
-    return v.invalid !== undefined;
+    return v.url !== undefined;
 }
 function buildUrlValidator(options) {
     var inputs = Object.assign({}, options);
@@ -73,7 +73,7 @@ function buildUrlValidator(options) {
             return results;
         }
         if (inputs.https && results.protocol !== 'https') {
-            return { invalid: true };
+            return { url: 'HTTPS Required' };
         }
         return null;
     };
@@ -108,5 +108,5 @@ var NgxInputValidatorsModule = /** @class */ (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { NgxInputValidatorsModule, buildUrlValidator, isInvalidSpec, normalizeHost, normalizeUrl, validateUrl };
+export { NgxInputValidatorsModule, buildUrlValidator, normalizeHost, normalizeUrl, validateUrl };
 //# sourceMappingURL=polpware-ngx-input-validators.js.map

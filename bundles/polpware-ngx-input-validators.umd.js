@@ -8,11 +8,11 @@
         var pattern = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
         var expr = new RegExp(pattern);
         if (!expr.test(value)) {
-            return { invalid: true };
+            return { url: 'Invalid URL' };
         }
         var results = new Url(value, parseQuery);
         if (!results.protocol || !results.host) {
-            return { invalid: true };
+            return { url: 'Invalid URL' };
         }
         return results;
     }
@@ -64,7 +64,7 @@
     }
     // Type predicate 
     function isInvalidSpec(v) {
-        return v.invalid !== undefined;
+        return v.url !== undefined;
     }
     function buildUrlValidator(options) {
         var inputs = Object.assign({}, options);
@@ -75,7 +75,7 @@
                 return results;
             }
             if (inputs.https && results.protocol !== 'https') {
-                return { invalid: true };
+                return { url: 'HTTPS Required' };
             }
             return null;
         };
@@ -104,7 +104,6 @@
 
     exports.NgxInputValidatorsModule = NgxInputValidatorsModule;
     exports.buildUrlValidator = buildUrlValidator;
-    exports.isInvalidSpec = isInvalidSpec;
     exports.normalizeHost = normalizeHost;
     exports.normalizeUrl = normalizeUrl;
     exports.validateUrl = validateUrl;
