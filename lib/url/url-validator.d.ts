@@ -33,3 +33,4 @@ export declare function buildUrlValidator(options?: {
     https?: boolean;
     parseQuery?: boolean;
 }): (control: FormControl) => IInvalidSpec;
+//# sourceMappingURL=url-validator.d.ts.map

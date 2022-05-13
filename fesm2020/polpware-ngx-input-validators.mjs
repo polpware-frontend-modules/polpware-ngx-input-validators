@@ -1,5 +1,6 @@
 import * as Url from 'url-parse';
-import { ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata, NgModule } from '@angular/core';
+import * as i0 from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 function validateUrl(value, parseQuery) {
@@ -82,12 +83,12 @@ function buildUrlValidator(options) {
 
 class NgxInputValidatorsModule {
 }
-NgxInputValidatorsModule.ɵmod = ɵɵdefineNgModule({ type: NgxInputValidatorsModule });
-NgxInputValidatorsModule.ɵinj = ɵɵdefineInjector({ factory: function NgxInputValidatorsModule_Factory(t) { return new (t || NgxInputValidatorsModule)(); }, imports: [[
+NgxInputValidatorsModule.ɵfac = function NgxInputValidatorsModule_Factory(t) { return new (t || NgxInputValidatorsModule)(); };
+NgxInputValidatorsModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: NgxInputValidatorsModule });
+NgxInputValidatorsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             FormsModule
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(NgxInputValidatorsModule, { imports: [FormsModule] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NgxInputValidatorsModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NgxInputValidatorsModule, [{
         type: NgModule,
         args: [{
                 declarations: [],
@@ -97,6 +98,7 @@ NgxInputValidatorsModule.ɵinj = ɵɵdefineInjector({ factory: function NgxInput
                 exports: []
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NgxInputValidatorsModule, { imports: [FormsModule] }); })();
 
 /*
  * Public API Surface of ngx-input-validators
@@ -107,4 +109,4 @@ NgxInputValidatorsModule.ɵinj = ɵɵdefineInjector({ factory: function NgxInput
  */
 
 export { NgxInputValidatorsModule, buildUrlValidator, isInvalidSpec, normalizeHost, normalizeUrl, validateUrl };
-//# sourceMappingURL=polpware-ngx-input-validators.js.map
+//# sourceMappingURL=polpware-ngx-input-validators.mjs.map

@@ -1,24 +1,35 @@
 {
   "name": "@polpware/ngx-input-validators",
-  "version": "9.0.3",
+  "version": "13.0.0",
   "peerDependencies": {
-    "@angular/common": "^9.1.12",
-    "@angular/core": "^9.1.12",
-    "url-parse": "^1.4.4"
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "url-parse": "^1.5.0"
   },
   "dependencies": {
-    "tslib": "^1.10.0"
+    "tslib": "^2.0.0"
   },
-  "main": "bundles/polpware-ngx-input-validators.umd.js",
-  "module": "fesm5/polpware-ngx-input-validators.js",
-  "es2015": "fesm2015/polpware-ngx-input-validators.js",
-  "esm5": "esm5/polpware-ngx-input-validators.js",
-  "esm2015": "esm2015/polpware-ngx-input-validators.js",
-  "fesm5": "fesm5/polpware-ngx-input-validators.js",
-  "fesm2015": "fesm2015/polpware-ngx-input-validators.js",
+  "module": "fesm2015/polpware-ngx-input-validators.mjs",
+  "es2020": "fesm2020/polpware-ngx-input-validators.mjs",
+  "esm2020": "esm2020/polpware-ngx-input-validators.mjs",
+  "fesm2020": "fesm2020/polpware-ngx-input-validators.mjs",
+  "fesm2015": "fesm2015/polpware-ngx-input-validators.mjs",
   "typings": "polpware-ngx-input-validators.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./polpware-ngx-input-validators.d.ts",
+      "esm2020": "./esm2020/polpware-ngx-input-validators.mjs",
+      "es2020": "./fesm2020/polpware-ngx-input-validators.mjs",
+      "es2015": "./fesm2015/polpware-ngx-input-validators.mjs",
+      "node": "./fesm2015/polpware-ngx-input-validators.mjs",
+      "default": "./fesm2020/polpware-ngx-input-validators.mjs"
+    }
+  },
   "sideEffects": false,
   "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
   }
 }
