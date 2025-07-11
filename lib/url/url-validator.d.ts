@@ -1,4 +1,4 @@
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 export interface IUrlParseResult {
     protocol: 'http' | 'https';
     slashes: boolean;
@@ -32,5 +32,5 @@ export declare function isInvalidSpec(v: IUrlParseResult | IInvalidSpec): v is I
 export declare function buildUrlValidator(options?: {
     https?: boolean;
     parseQuery?: boolean;
-}): (control: FormControl) => IInvalidSpec;
+}): (control: UntypedFormControl) => IInvalidSpec;
 //# sourceMappingURL=url-validator.d.ts.map

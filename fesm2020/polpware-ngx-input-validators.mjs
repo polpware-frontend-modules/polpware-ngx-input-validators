@@ -85,9 +85,7 @@ class NgxInputValidatorsModule {
 }
 NgxInputValidatorsModule.ɵfac = function NgxInputValidatorsModule_Factory(t) { return new (t || NgxInputValidatorsModule)(); };
 NgxInputValidatorsModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: NgxInputValidatorsModule });
-NgxInputValidatorsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
-            FormsModule
-        ]] });
+NgxInputValidatorsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [FormsModule] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NgxInputValidatorsModule, [{
         type: NgModule,
         args: [{

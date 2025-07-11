@@ -1,9 +1,9 @@
 {
   "name": "@polpware/ngx-input-validators",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "peerDependencies": {
-    "@angular/common": "^13.0.0",
-    "@angular/core": "^13.0.0",
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
     "url-parse": "^1.5.0"
   },
   "dependencies": {
@@ -14,13 +14,13 @@
   "esm2020": "esm2020/polpware-ngx-input-validators.mjs",
   "fesm2020": "fesm2020/polpware-ngx-input-validators.mjs",
   "fesm2015": "fesm2015/polpware-ngx-input-validators.mjs",
-  "typings": "polpware-ngx-input-validators.d.ts",
+  "typings": "index.d.ts",
   "exports": {
     "./package.json": {
       "default": "./package.json"
     },
     ".": {
-      "types": "./polpware-ngx-input-validators.d.ts",
+      "types": "./index.d.ts",
       "esm2020": "./esm2020/polpware-ngx-input-validators.mjs",
       "es2020": "./fesm2020/polpware-ngx-input-validators.mjs",
       "es2015": "./fesm2015/polpware-ngx-input-validators.mjs",
