@@ -82,10 +82,10 @@ function buildUrlValidator(options) {
 }
 
 class NgxInputValidatorsModule {
+    static { this.ɵfac = function NgxInputValidatorsModule_Factory(t) { return new (t || NgxInputValidatorsModule)(); }; }
+    static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: NgxInputValidatorsModule }); }
+    static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [FormsModule] }); }
 }
-NgxInputValidatorsModule.ɵfac = function NgxInputValidatorsModule_Factory(t) { return new (t || NgxInputValidatorsModule)(); };
-NgxInputValidatorsModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: NgxInputValidatorsModule });
-NgxInputValidatorsModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [FormsModule] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NgxInputValidatorsModule, [{
         type: NgModule,
         args: [{
