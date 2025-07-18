@@ -82,7 +82,7 @@ function buildUrlValidator(options) {
 }
 
 class NgxInputValidatorsModule {
-    static { this.ɵfac = function NgxInputValidatorsModule_Factory(t) { return new (t || NgxInputValidatorsModule)(); }; }
+    static { this.ɵfac = function NgxInputValidatorsModule_Factory(__ngFactoryType__) { return new (__ngFactoryType__ || NgxInputValidatorsModule)(); }; }
     static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: NgxInputValidatorsModule }); }
     static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [FormsModule] }); }
 }
